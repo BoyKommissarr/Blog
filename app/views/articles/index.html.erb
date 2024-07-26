@@ -1,2 +1,14 @@
 Hello World
 <h1><marquee>Kya Bolti Company</marquee></h1>
+<hr>
+<h1>Articles</h1>
+
+<table border = 3 cellpadding = "10">
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title%></td>
+      <td><%= article.body%></td>
+    </tr>
+  <% end %>
+</table>
+
