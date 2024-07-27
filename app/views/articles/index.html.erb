@@ -4,10 +4,20 @@ Hello World
 <h1>Articles</h1>
 
 <table border = 3 cellpadding = "10">
+<thead>
+    <th>ID</th>
+    <th>Record</th>
+    <th>Description</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+</thead>
   <% @articles.each do |article| %>
     <tr>
+      <td><%= article.id%></td>
       <td><%= article.title%></td>
       <td><%= article.body%></td>
+      <td><%= article.created_at%>
+      <td><%= article.updated_at%>
     </tr>
   <% end %>
 </table>
