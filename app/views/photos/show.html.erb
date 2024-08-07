@@ -1,0 +1,17 @@
+<center>
+<h1>Photo<%=@photo.id%></h1>
+<table border = 3 cellpadding = "10">
+    <thead>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image</th>
+    </thead>    
+    <tbody>
+    <td><%=@photo.id%></td>
+    <td><%=@photo.title %></td>
+    <td><%=@photo.desc%></td>
+    <td><img src = "<%=@photo.location%>" title = "<%=@photo.title%>" alt = "<%=@photo.location%>"></td>
+    </tbody>
+</table>
+</center>

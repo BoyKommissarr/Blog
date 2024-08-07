@@ -1,0 +1,23 @@
+<h1>Photos</h1>
+<table border = 3 cellpadding=10>
+  <thead>
+    <th>ID</th>
+    <th>Title</th>
+    <%# <th>Description</th>
+    <th>Location</th>
+    <th>Created at</th>
+    <th>Updated at</th> %>
+    <th>View Photo</th>
+  </thead>
+  <% @photos.each do |photo| %>
+  <tr>
+    <td><%=photo.id%></td>
+    <td><%=photo.title %></td>
+    <!--<td><%=photo.desc%></td>
+    <td><%=photo.location%></td>
+    <td><%=photo.created_at%></td>
+    <td><%=photo.updated_at%></td>-->
+    <td><a href="/photos/<%=photo.id%>"><%=photo.title%></td>
+  </tr>
+  <% end %>
+</table>
