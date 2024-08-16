@@ -17,8 +17,6 @@ Rails.application.routes.draw do
 
   get "/photos/:id", to: "photos#show"
 
-
-
   resources :articles do
     resources :comments
   end
