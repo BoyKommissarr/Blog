@@ -10,8 +10,8 @@
     <th>ID</th>
     <th>Record</th>
     <th>Description</th>
-    <th>Created at</th>
-    <th>Updated at</th>
+    <%# <th>Created at</th>
+    <th>Updated at</th> %>
     <%# <th>Tag</th> %>
     <th>Ruby tag</th>
 </thead>
@@ -20,9 +20,9 @@
       <td><%= article.id%></td>
       <td><%= article.title%></td>
       <td><%= article.body%></td>
-      <td><%= article.created_at%></td>
+      <!--<td><%= article.created_at%></td>
       <td><%= article.updated_at%></td>
-      <!--<td><a href="/articles/<%= article.id%>">Record <%= article.id%></a></td>-->
+      <td><a href="/articles/<%= article.id%>">Record <%= article.id%></a></td>-->
       <td><%= link_to "Record #{article.id}", article%> <%# "/articles/#{article.id}" %>
     </tr>
   <% end %>
