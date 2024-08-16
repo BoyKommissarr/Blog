@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get "/articles/:id/edit", to: "articles#edit", as: :edit_article
 
+  patch "/articles/:id/update", to: "articles#update"
+
   get "/photos",to: "photos#index"
 
   get "/photos/:id", to: "photos#show"

@@ -1,13 +1,20 @@
 <h1>Must you Edit</h1>
 <center>
+<%= form_with model: @article, url: "/articles/#{@article.id}/update" do |form| %>
 <table border = "4" cellpadding = "10">
 <thead>
-    <th>Title</th>
-    <th>Description</th>
+    <th><%= form.label :title %></th>
+    <th><%= form.label :body %></th>
 </thead>
 <tbody>
-    <td><%= @article.title%></td>
-    <td><%= @article.body%></td>
+<tr>
+    <td><%=form.text_field :title %></td>  
+    <td><%= form.text_area :body %></td>
+</tr>
+<tr>
+    <td colspan = "2"><center><%= form.submit %><center></td>
+</tr>
+<% end %>
 </tbody>
 </table>
 <center>
