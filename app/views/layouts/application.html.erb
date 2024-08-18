@@ -18,7 +18,12 @@
   </head>
 
   <body>
-    <%=link_to "New Article", "/articles/new"%>
+  <nav style = "display:inline;color:red">
+    <ul>
+      <li><%=link_to "New Article", "/articles/new"%></li>
+      <li>Yet another link</li>
+    </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

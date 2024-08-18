@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   patch "/articles/:id/update", to: "articles#update"
 
+  delete "/articles/:id", to: "articles#destroy"
+
   get "/photos",to: "photos#index"
 
   get "/photos/:id", to: "photos#show"
