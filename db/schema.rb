@@ -33,7 +33,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_07_135343) do
     t.text "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "article_id", null: false
   end
 
   add_foreign_key "comments", "articles"

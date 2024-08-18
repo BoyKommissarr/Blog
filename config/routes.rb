@@ -17,9 +17,21 @@ Rails.application.routes.draw do
 
   delete "/articles/:id", to: "articles#destroy"
 
+  # Photos
+
   get "/photos",to: "photos#index"
 
+  get "/photos/new", to: "photos#new"
+
   get "/photos/:id", to: "photos#show"
+
+  post "/photos/create", to: "photos#create"
+
+  get "/photos/:id/edit", to: "photos#edit", as: :edit_photo
+
+  patch "/photos/:id/update", to: "photos#update"
+
+  delete "/photos/:id", to: "photos#destroy"
 
   resources :articles do
     resources :comments

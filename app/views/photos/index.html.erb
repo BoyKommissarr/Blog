@@ -8,6 +8,8 @@
     <th>Created at</th>
     <th>Updated at</th> %>
     <th>View Photo</th>
+    <th>Edit Record</th>
+    <th>Delete Record</th>
   </thead>
   <% @photos.each do |photo| %>
   <tr>
@@ -18,6 +20,9 @@
     <td><%=photo.created_at%></td>
     <td><%=photo.updated_at%></td>-->
     <td><a href="/photos/<%=photo.id%>"><%=photo.title%></td>
+    <td><%= link_to "EDIT #{photo.id}", "/photos/#{photo.id}/edit"%></td>
+    <td><%= link_to "DELETE?#{photo.id}", "/photos/#{photo.id}", data: {turbo_method: :delete,turbo_confirm: "Bawa record udd jata dekho?"}%>
   </tr>
   <% end %>
 </table>
+<h3><%=link_to "Add a new Photu", "/photos/new"%>
