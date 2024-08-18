@@ -1,0 +1,19 @@
+<center>
+<%= form_with model: model, url: url do |form| %>
+<table border = "4" cellpadding = "10">
+	<thead>
+		<th><%= form.label :title %></th>
+		<th><%= form.label :body %></th>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%=form.text_field :title %></td>  
+			<td><%= form.text_area :body %></td>
+		</tr>
+		<tr>
+			<td colspan = "2"><center><%= form.submit %><center></td>
+		</tr>
+	</tbody>
+</table>
+<% end %>
+</center>
